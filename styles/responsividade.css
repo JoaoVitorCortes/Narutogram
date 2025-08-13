@@ -87,6 +87,52 @@
   .post-caption {
     padding: 0 1rem 1rem;
   }
+
+  /* Responsiviade do personagem.css */
+  .header-content {
+    padding: 1rem;
+  }
+
+  #pagina-personagem {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px 1rem 2rem;
+  }
+
+  .imagem-personagem {
+    position: relative;
+    left: 0;
+    height: 300px;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  .caixa-de-info {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0px !important;
+  }
+
+  #nome-char {
+    font-size: 2rem;
+  }
+
+  .info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #lista-habilidades {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -97,6 +143,39 @@
 
   .option-sidebar {
     justify-content: center;
+  }
+
+  /* Ajustando a responsividade do personagem.css no tablet */
+  #pagina-personagem {
+    height: auto;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .caixa-de-info {
+    margin: 0px;
+  }
+  /* Responvidade da imagem */
+  .imagem-personagem {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    left: 2%;
+    height: 80%;
+  }
+  .imagem-personagem img {
+    height: auto;
+    width: 90%;
+    max-width: 700px;
+  }
+
+  /* Responsiviade da infobox */
+  .caixa-de-info {
+    min-height: 100vh;
+    max-width: 450px;
   }
 }
 
