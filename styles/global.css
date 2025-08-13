@@ -46,10 +46,6 @@ button {
   cursor: pointer;
 }
 
-::selection {
-  color: var(--cor-destaque);
-}
-
 /* Para navegadores baseados em Webkit (Chrome, Safari, Edge, Opera) */
 body::-webkit-scrollbar {
   width: 12px; /* Largura da barra de rolagem */

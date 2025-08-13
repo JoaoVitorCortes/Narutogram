@@ -12,8 +12,10 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: auto;
   background: var(--gradiente-personagem);
   color: var(--texto-principal);
   overflow-x: hidden;
@@ -21,6 +23,7 @@ body {
 
 /* Header Styles */
 header {
+  padding: 0rem 2rem !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -79,10 +82,8 @@ header {
 
 /* Character Image */
 .imagem-personagem {
-  position: absolute;
-  left: 5%;
-  bottom: 0;
-  height: 95%;
+  height: 100%;
+  width: 100%;
   z-index: 2;
   filter: drop-shadow(0 0 20px var(--preto-trans));
 }
@@ -103,8 +104,11 @@ header {
   border-radius: 20px;
   padding: 2rem;
   max-width: 500px;
+  max-height: 100%;
   margin-left: auto;
   margin-right: 10%;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 20px 40px var(--preto-trans);
 }
 
@@ -140,7 +144,7 @@ header {
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
   color: var(--texto-principalo);
@@ -225,80 +229,8 @@ header {
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
-  .imagem-personagem {
-    left: 2%;
-    height: 80%;
-  }
-
-  .caixa-de-info {
-    margin-right: 5%;
-    max-width: 450px;
-  }
-}
 
 @media (max-width: 768px) {
-  .header-content {
-    padding: 1rem;
-  }
-
-  #pagina-personagem {
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 100px 1rem 2rem;
-  }
-
-  .imagem-personagem {
-    position: relative;
-    left: 0;
-    height: 300px;
-    margin-bottom: 2rem;
-    align-self: center;
-  }
-
-  .caixa-de-info {
-    position: relative;
-    margin: 0;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  #nome-char {
-    font-size: 2rem;
-  }
-
-  .info-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #lista-habilidades {
-    grid-template-columns: 1fr;
-  }
-
-  .info-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-content {
-    padding: 0.5rem;
-  }
-
-  .caixa-de-info {
-    padding: 1.5rem;
-  }
-
-  #nome-char {
-    font-size: 1.8rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
 }
 
 /* Loading Animation */
