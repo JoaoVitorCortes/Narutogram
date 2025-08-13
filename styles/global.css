@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: auto;
+  font-family: fira sans;
+  background-color: var(--background-feed);
+  color: var(--texto-principal);
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+input,
+textarea {
+  background-color: var(--texto-principal);
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: var(--cor-destaque);
+}
+
+/* Para navegadores baseados em Webkit (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-feed); /* Cor do fundo da trilha */
+  border-left: 1px solid var(--cinza-escuro); /* Uma pequena borda para separar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-destaque); /* Cor principal da barra */
+  border-radius: 20px; /* Bordas arredondadas */
+  border: 3px solid var(--background-feed); /* Cria um efeito de preenchimento */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --cor-destaque-hover
+  ); /* Cor da barra ao passar o mouse */
+}
+
+/* Para Firefox */
+/* A estilização no Firefox é mais simples e menos customizável */
+* {
+  scrollbar-width: thin; /* Pode ser 'auto', 'thin' ou 'none' */
+  scrollbar-color: var(--cor-destaque) var(--background-feed); /* Cor da barra e cor do fundo */
+}

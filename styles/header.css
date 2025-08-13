@@ -1,0 +1,53 @@
+header {
+  background-color: var(--background-post);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 7rem;
+  border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.logo-header img {
+  width: 200px;
+}
+
+.logo-header:hover {
+  color: var(--cor-destaque-hover);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.barra-buscar {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--cor-destaque);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  background-color: var(--background-post);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.icone-buscar {
+  color: var(--cor-destaque);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.barra-buscar input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--cor-destaque);
+  flex: 1;
+  background: transparent;
+}
+
+.barra-buscar input::placeholder {
+  color: var(--cor-destaque);
+  opacity: 0.7;
+}

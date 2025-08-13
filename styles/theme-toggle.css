@@ -1,0 +1,52 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1001; /* Garante que fique acima do conteúdo, mas abaixo dos modais */
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  cursor: pointer;
+}
+
+#theme-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-post);
+  border: 1px solid var(--borda);
+  border-radius: 34px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+}
+
+.slider #theme-icon {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  margin-left: 4px;
+  transition: transform 0.4s;
+}
+
+/* Lógica do Deslize */
+input:checked + .toggle-switch .slider #theme-icon {
+  transform: translateX(26px);
+}
+
+::selection {
+  color: var(--cor-destaque);
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card - Narutogram</title>
+    <link rel="icon" href="/img/Favicom Narutogram.png">
+    <link rel="stylesheet" href="styles/personagem.css">
+    <link rel="stylesheet" href="/styles/theme-toggle.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script defer src="scripts/script-personagem.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="feed.html" class="back-btn">← Voltar ao Feed</a>
+            <img id="icone-char" class="header-icon" alt="Ícone do personagem">
+            <h2 id="header-nome" class="header-name">Carregando...</h2>
+        </div>
+    </header>
+
+    <main id="pagina-personagem">
+        <div class="imagem-personagem">
+            <img id="imagem-char" alt="Imagem do personagem">
+        </div>
+
+        <div class="caixa-de-info">
+            <div class="info-header">
+                <h1 id="nome-char">Carregando...</h1>
+                <span id="rank-char" class="rank-badge">-</span>
+            </div>
+
+            <p id="descricao-char" class="description">Carregando informações do personagem...</p>
+
+            <div class="caixa-habilidades">
+                <h3>Habilidades</h3>
+                <ul id="lista-habilidades">
+                    <li>Carregando...</li>
+                </ul>
+            </div>
+
+            <div class="personal-info">
+                <h3>Informações Pessoais</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Data de Nascimento:</span>
+                        <span id="birthdate" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Afiliação:</span>
+                        <span id="affiliation" class="value">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Primeira Aparição:</span>
+                        <span id="debut" class="value">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox">
+        <label for="theme-checkbox" class="toggle-switch">
+            <span class="slider">
+                <img id="theme-icon" src="img/sharingan.png" alt="Ícone do tema">
+            </span>
+        </label>
+    </div>
+
+
+    <script type="module" defer src="scripts/script-curtidas.js"></script>
+    <script src="scripts/script-theme.js"></script>
+</body>
+
+</html>

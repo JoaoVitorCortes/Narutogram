@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/Favicom Narutogram.png">
+    <title>Cadastro - Narutogram</title>
+    <link rel="stylesheet" href="/styles/auth-styles.css">
+    <link rel="stylesheet" href="/styles/theme-toggle.css">
+</head>
+
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Logo e título -->
+            <div class="auth-header">
+                <div class="logo">
+                    <img src="/img/Narutogram-logo.png" alt="" srcset="">
+                </div>
+                <h1>Crie sua conta</h1>
+                <p>Junte-se à nossa comunidade ninja e comece a compartilhar</p>
+            </div>
+
+            <!-- Formulário de cadastro -->
+            <form id="registerForm" class="auth-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="bi bi-person input-icon"></i>
+                            <input type="text" id="firstName" name="firstName" placeholder="Nome">
+                        </div>
+                        <span class="error-message" id="firstNameError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="bi bi-person input-icon"></i>
+                            <input type="text" id="lastName" name="lastName" placeholder="Sobrenome">
+                        </div>
+                        <span class="error-message" id="lastNameError"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="bi bi-envelope input-icon"></i>
+                        <input type="email" id="registerEmail" name="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <span class="error-message" id="registerEmailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="bi bi-star input-icon"></i>
+                        <input type="text" id="jutsu" name="jutsu" placeholder="Qual seu jutsu favorito?">
+                    </div>
+                    <span class="error-message" id="jutsuError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <i class="bi bi-brightness-alt-low-fill input-icon"></i>
+                        <input type="text" id="village" name="village" placeholder="De qual vila você é?">
+                    </div>
+                    <span class="error-message" id="villageError"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock input-icon"></i>
+                            <input id="registerPassword" name="password" placeholder="Crie uma senha" required>
+                            <button type="button" class="password-toggle" id="toggleRegisterPassword">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="registerPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="input-wrapper">
+                            <i class="bi bi-lock input-icon"></i>
+                            <input id="confirmPassword" name="confirmPassword" placeholder="Confirme a senha" required>
+                            <button type="button" class="password-toggle" id="toggleConfirmPassword">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+                </div>
+
+                <button type="submit" class="auth-button" id="registerButton">
+                    <span class="button-text">Criar Conta</span>
+                    <div class="loading-spinner" style="display: none;">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </div>
+                </button>
+            </form>
+
+            <!-- Link para login -->
+            <div class="auth-footer">
+                <p>Já tem uma conta? <a href="index.html" class="auth-link">Faça login</a></p>
+            </div>
+        </div>
+
+        <!-- Seção lateral com informações -->
+        <div class="auth-info">
+            <div class="info-content">
+                <h2>Junte-se à nossa comunidade de ninjas</h2>
+                <p>Milhares de ninjas já fazem parte da nossa rede social. Crie sua conta e descubra um mundo de possibilidades.</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <i class="bi bi-shield-check"></i>
+                        <span>100% seguro e privado</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-lightning"></i>
+                        <span>Cadastro rápido e fácil</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-globe"></i>
+                        <span>Conecte-se globalmente</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="bi bi-gift"></i>
+                        <span>Recursos exclusivos</span>
+                    </div>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Usuários ativos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Posts compartilhados</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Conexões feitas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de notificação -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i class="toast-icon"></i>
+            <span class="toast-message"></span>
+        </div>
+    </div>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox">
+        <label for="theme-checkbox" class="toggle-switch">
+            <span class="slider">
+                <img id="theme-icon" src="img/sharingan.png" alt="Ícone do tema">
+            </span>
+        </label>
+    </div>
+    <script type="module" defer src="scripts/script-curtidas.js"></script>
+    <script src="scripts/script-theme.js"></script>
+    <script src="/scripts/auth-cadastro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+/* Importa as variáveis de cor e fontes do projeto */
+@import url("style.css");
+
+body {
+  background-color: var(--background-feed);
+  color: var(--texto-principal);
+  font-family: fira sans, sans-serif;
+}
+
+.perfil-nav {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--cinza-escuro);
+  margin-bottom: 2rem;
+}
+
+.voltar-btn {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--texto-principal);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.voltar-btn:hover {
+  color: var(--cor-destaque);
+}
+
+.voltar-btn i {
+  margin-right: 0.5rem;
+}
+
+.perfil-container {
+  max-width: 975px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.perfil-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cinza-escuro);
+}
+
+.perfil-info {
+  flex: 1;
+}
+
+.perfil-info .username {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.perfil-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  font-size: 1rem;
+}
+
+.stat-numero {
+  font-weight: 600;
+}
+
+.perfil-bio .nome-completo {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.perfil-bio p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.perfil-botoes {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.perfil-botoes button {
+  flex: 1;
+  background-color: var(--cinza-perfil);
+  color: var(--texto-principal);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.perfil-botoes button:hover {
+  background-color: #4a4a4a;
+}
+
+.perfil-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  border-top: 1px solid var(--cinza-escuro);
+  padding-top: 1rem;
+}
+
+.tab-btn {
+  color: var(--cinza-claro);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 0.5rem;
+  border-top: 1px solid transparent;
+  margin-top: -1px; /* Para sobrepor a borda do container */
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active-tab {
+  color: var(--texto-principal);
+  border-top: 1px solid var(--texto-principal);
+}
+
+.tab-btn:hover:not(.active-tab) {
+  color: var(--texto-principal);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Espaçamento entre as imagens */
+  padding-top: 2rem;
+}
+
+.grid-item {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Truque para manter o aspect ratio 1:1 */
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.grid-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.grid-item:hover img {
+  opacity: 0.8;
+}

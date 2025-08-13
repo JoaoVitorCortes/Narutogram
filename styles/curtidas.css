@@ -1,0 +1,29 @@
+/* Estilos para a seção de curtidas do post */
+
+.post-likes {
+    padding: 0 1.5rem 0.5rem; /* Adicionado padding para alinhar com o resto */
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: default;
+}
+
+/* Estilização do botão de like quando está 'curtido' */
+.like-btn.liked i {
+    /* A cor vermelha de destaque quando o post é curtido */
+    color: var(--cor-destaque-hover);
+    /* Animação sutil de pulsação ao curtir */
+    animation: like-pulse 0.3s ease;
+}
+
+/* Usamos a propriedade 'content' do pseudo-elemento ::before
+   para trocar o ícone de coração vazio para o cheio */
+.like-btn.liked .bi-hearts::before {
+    content: "\f415"; /* Este é o código Unicode do ícone de coração preenchido no Bootstrap Icons */
+}
+
+/* Animação de pulsação para o coração */
+@keyframes like-pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,353 @@
+@import url(variaveis.css);
+@font-face {
+  font-family: "njnaruto";
+  src: url(/fonts/njnaruto.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--gradiente-personagem);
+  color: var(--texto-principal);
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--preto-trans);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+
+.back-btn {
+  color: var(--cor-destaque);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--cor-destaque);
+}
+
+.header-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--cor-destaque);
+}
+
+.header-name {
+  color: var(--texto-principal);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Main Page Styles */
+#pagina-personagem {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+/* Character Image */
+.imagem-personagem {
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  height: 95%;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px var(--preto-trans));
+}
+
+.imagem-personagem img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Info Box */
+.caixa-de-info {
+  position: relative;
+  z-index: 3;
+  background: var(--card-color);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--cinza-escuro);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: 10%;
+  box-shadow: 0 20px 40px var(--preto-trans);
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#nome-char {
+  font-family: njnaruto, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background: var(--gradiente);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px var(--cor-destaque);
+}
+
+.rank-badge {
+  background: var(--gradiente);
+  color: var(--texto-principal);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 0 15px var(--cor-destaque);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--texto-principalo);
+}
+
+/* Skills Box */
+.caixa-habilidades {
+  background: var(--cinza-escuro);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.caixa-habilidades h3 {
+  color: var(--cor-destaque);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+#lista-habilidades {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5rem;
+}
+
+#lista-habilidades li {
+  background: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque-hover);
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#lista-habilidades li:hover {
+  background: var(--cor-destaque-hover);
+  transform: translateY(-2px);
+}
+
+/* Personal Info */
+.personal-info {
+  background: var(--cinza-escuro);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.personal-info h3 {
+  color: var(--cor-destaque);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.info-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--cinza-escuro);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--texto-principal);
+}
+
+.value {
+  color: var(--texto-principal);
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .imagem-personagem {
+    left: 2%;
+    height: 80%;
+  }
+
+  .caixa-de-info {
+    margin-right: 5%;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem;
+  }
+
+  #pagina-personagem {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 100px 1rem 2rem;
+  }
+
+  .imagem-personagem {
+    position: relative;
+    left: 0;
+    height: 300px;
+    margin-bottom: 2rem;
+    align-self: center;
+  }
+
+  .caixa-de-info {
+    position: relative;
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #nome-char {
+    font-size: 2rem;
+  }
+
+  .info-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #lista-habilidades {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0.5rem;
+  }
+
+  .caixa-de-info {
+    padding: 1.5rem;
+  }
+
+  #nome-char {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth Transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Para navegadores baseados em Webkit (Chrome, Safari, Edge, Opera) */
+body::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-feed); /* Cor do fundo da trilha */
+  border-left: 1px solid var(--cinza-escuro); /* Uma pequena borda para separar */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--cor-destaque); /* Cor principal da barra */
+  border-radius: 20px; /* Bordas arredondadas */
+  border: 3px solid var(--background-feed); /* Cria um efeito de preenchimento */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --cor-destaque-hover
+  ); /* Cor da barra ao passar o mouse */
+}
+
+/* Para Firefox */
+/* A estilização no Firefox é mais simples e menos customizável */
+* {
+  scrollbar-width: thin; /* Pode ser 'auto', 'thin' ou 'none' */
+  scrollbar-color: var(--cor-destaque) var(--background-feed); /* Cor da barra e cor do fundo */
+}

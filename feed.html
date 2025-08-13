@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narutogram</title>
+    <link rel="icon" href="/img/Favicom Narutogram.png">
+    <link rel="stylesheet" defer href="styles/style.css">
+    <script type="module" defer src="scripts/script-postagem.js"></script>
+    <script type="module" defer src="scripts/script-feed.js"></script>
+    <script type="module" defer src="scripts/script-comentario.js"></script>
+    <script type="module" defer src="scripts/script-curtidas.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-header">
+            <a href=""><img src="/img/Narutogram-logo.png" alt=""></i></a>
+        </div>
+        <div class="barra-buscar">
+            <span class="icone-buscar"><i class="bi bi-search"></i></span>
+            <input type="text" placeholder="Buscar Ninja">
+            <div id="input-resultados"></div>
+        </div>
+
+        <div id="icon-header">
+            <div class="option-sidebar">
+                <a class="icon-sidebar" aria-label="Curtidas" href=""><i class="bi bi-heart-fill"></i></a>
+                <a href="">
+                    <p>Curtidas</p>
+                </a>
+            </div>
+            <div class="option-sidebar">
+                <a class="icon-sidebar" aria-label="Mensagens" href="mensagem.html"><i class="bi bi-chat-dots-fill"></i></a>
+                <a href="mensagem.html">
+                    <p>Mensagens</p>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="sidebar">
+        <div class="option-sidebar">
+            <a class="icon-sidebar" aria-label="Pagina Inicial" href=""><i class="bi bi-house-fill"></i></a>
+            <a href="">
+                <p>Página inicial</p>
+            </a>
+        </div>
+        <div class="option-sidebar" id="curtidas">
+            <a class="icon-sidebar" aria-label="Curtidas" href=""><i class="bi bi-heart-fill"></i></a>
+            <a href="">
+                <p>Curtidas</p>
+            </a>
+        </div>
+        <div class="option-sidebar" id="mensagens">
+            <a class="icon-sidebar" aria-label="Mensagens" href="mensagem.html"><i class="bi bi-chat-dots-fill"></i></a>
+            <a href="mensagem.html">
+                <p>Mensagens</p>
+            </a>
+        </div>
+        <div class="option-sidebar" id="barra-criar-post" style="cursor: pointer;">
+            <button id="btn-criar-post" class="nav-icon-btn" title="Criar Postagem">
+                <i class="bi bi-plus-square-fill"></i>
+            </button>
+            <a>
+                <p>Criar</p>
+            </a>
+        </div>
+        <div class="option-sidebar">
+            <a href="perfil.html" class="perfil"><img src="img/jiraiya-profile.png" alt="Perfil"></a>
+            <a href="perfil.html">
+                <p>Perfil</p>
+            </a>
+        </div>
+
+        <div class="option-sidebar" id="btn-logout" style="cursor: pointer;">
+            <a class="icon-sidebar" aria-label="Sair"><i class="bi bi-box-arrow-right"></i></a>
+            <a>
+                <p>Sair</p>
+            </a>
+        </div>
+    </section>
+
+    <main id="feed-container">
+    </main>
+
+    <div id="modal-postagem" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-modal">&times;</span>
+            <form id="form-postagem">
+                <h2>Nova Postagem</h2>
+                <div class="form-grupo">
+                    <label for="input-url-imagem">Coloque a URL da sua foto aqui:</label>
+                    <input type="url" id="input-url-imagem" placeholder="https://exemplo.com/imagem.png" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="input-legenda">Descrição:</label>
+                    <textarea id="input-legenda" rows="4" placeholder="Escreva uma legenda..." required></textarea>
+                </div>
+                <button type="submit" class="btn-postar">Postar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-comentarios" class="modal">
+        <div class="modal-conteudo">
+            <div class="modal-header">
+                <h2>Comentários</h2>
+                <span class="fechar-modal">&times;</span>
+            </div>
+            <div id="lista-comentarios">
+            </div>
+            <form id="form-comentario">
+                <img src="img/jiraiya-profile.png" alt="Sua foto" class="profile-pic-comentario">
+                <input type="text" id="input-comentario" placeholder="Adicione um comentário..." autocomplete="off">
+                <button type="submit" id="btn-postar-comentario">Publicar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox">
+        <label for="theme-checkbox" class="toggle-switch">
+            <span class="slider">
+                <img id="theme-icon" src="img/sharingan.png" alt="Ícone do tema">
+            </span>
+        </label>
+    </div>
+
+    <script type="module" defer src="scripts/script-curtidas.js"></script>
+    <script src="scripts/script-theme.js"></script>
+</body>
+
+</html>

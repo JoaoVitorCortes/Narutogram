@@ -1,0 +1,52 @@
+:root {
+  /* TEMA PADRÃO (DARK MODE / SHARINGAN) */
+  --background-feed: #111111;
+  --background-post: #161616;
+  --texto-principal: #ffffff;
+  --card-color: #000000;
+  --texto-secundario: #a8a8a8;
+  --cinza-escuro: rgba(255, 255, 255, 0.05);
+  --cinza-claro: #666;
+  --cinza-perfil: #363636;
+  --cor-destaque: #a50e0e;
+  --cor-destaque-hover: rgb(232, 0, 0);
+  --preto-trans: rgba(0, 0, 0, 0.618);
+
+  --gradiente: linear-gradient(90deg, #a70000 0%, #f71e1e 100%);
+  --gradiente-personagem: linear-gradient(
+    135deg,
+    rgb(0, 0, 0) 0%,
+    #330000 50%,
+    rgb(80, 0, 0) 100%
+  );
+  --gradiente-story: linear-gradient(
+    135deg,
+    rgb(255, 0, 0) 0%,
+    #ff0059 50%,
+    rgb(255, 0, 183) 100%
+  );
+}
+
+body[data-theme="light"] {
+  /* TEMA CLARO (LIGHT MODE / BYAKUGAN) */
+  --background-feed: #f0f2f5;
+  --background-post: #ffffff;
+  --texto-principal: #050505;
+  --card-color: #fafafa;
+  --texto-secundario: #65676b;
+  --cinza-escuro: rgba(255, 255, 255, 0.05);
+  --cinza-claro: #8a8d91;
+  --cinza-perfil: #c4c4c4;
+  --cor-destaque: #6f37a7;
+  --cor-destaque-hover: #a851ff;
+  --preto-trans: rgba(255, 255, 255, 0.618);
+
+  --gradiente: linear-gradient(90deg, #7d0dfd 0%, #873dfd 100%);
+  --gradiente-personagem: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #b087e6 50%,
+    #8234db 100%
+  );
+  /* O gradiente da story pode ser mantido ou alterado se preferir */
+}

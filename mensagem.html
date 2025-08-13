@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens - Narutogram</title>
+    <link rel="icon" href="/img/Favicom Narutogram.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mensagem.css">
+    <script type="module" defer src="scripts/script-mensagem.js"></script>
+</head>
+
+<body>
+    <header class="perfil-nav">
+        <a href="feed.html" class="voltar-btn"><i class="bi bi-arrow-left"></i> Voltar ao Feed</a>
+    </header>
+
+    <main id="container-mensagens">
+        <div id="view-contatos" class="caixa-mensagem">
+            <h2>Mensagens</h2>
+            <div id="lista-contatos">
+            </div>
+        </div>
+
+        <div id="view-chat" class="caixa-mensagem" style="display: none;">
+            <div id="chat-header">
+                <img id="chat-header-img" src="" alt="Foto do Ninja">
+                <h3 id="chat-header-nome">Carregando...</h3>
+            </div>
+            <div id="chat-janela">
+            </div>
+            <form id="form-chat">
+                <input type="text" id="chat-input" placeholder="Digite uma mensagem..." autocomplete="off">
+                <button type="submit" id="btn-enviar-chat">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-checkbox">
+        <label for="theme-checkbox" class="toggle-switch">
+            <span class="slider">
+                <img id="theme-icon" src="img/sharingan.png" alt="Ícone do tema">
+            </span>
+        </label>
+    </div>
+
+    <script type="module" defer src="scripts/script-curtidas.js"></script>
+    <script src="scripts/script-theme.js"></script>
+</body>
+
+</html>
