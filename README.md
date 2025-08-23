@@ -14,7 +14,7 @@ Para fazer o deploy desse projeto acesse:
 https://narutogram.netlify.app/ 
 
 
-## Stacks utilizada 💻
+## Stacks utilizadas 💻
 
 **Front-end:** HTML, CSS, JavaScript, Integração de API
 
