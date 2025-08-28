@@ -9,7 +9,7 @@ The project aims to simulate a social media platform similar to Instagram or Fac
 
 ## Deploy 🥷
 
-Para fazer o deploy desse projeto acesse:
+Acesse:
 
 https://narutogram.netlify.app/ 
 
